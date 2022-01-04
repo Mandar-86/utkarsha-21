@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Firefox {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Shree\\Downloads\\geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.facebook.com");
+		
+		WebElement username=driver.findElement(By.xpath("//*[@type='text']//parent::div[1]"));
+		username.sendKeys("dmandar86");
+		
+	}
+
+}
